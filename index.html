@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyVault | E-Book Library</title>
+<link rel="stylesheet" href="proj.css">
+</head>
+<body>
+
+
+<div class="info-bar">
+  <div class="info-bar-inner">
+    <span><strong>Name:</strong> Rabiu Azeezat Adetoun</span>
+    <span class="divider">|</span>
+    <span><strong>Matric No:</strong> 2023/12180</span>
+    <span class="divider">|</span>
+    <span><strong>Department:</strong> Computer Science</span>
+  </div>
+</div>
+
+
+<header class="site-header">
+  <div class="header-content">
+    <div class="logo-block">
+      <span class="logo-icon">&#128218;</span>
+      <div>
+        <h1>StudyVault</h1>
+        <p class="tagline">Your Personal E-Book &amp; Study Material Library</p>
+      </div>
+    </div>
+    <div class="stats-block">
+      <div class="stat-card">
+        <span id="totalBooks">0</span>
+        <small>Materials</small>
+      </div>
+      <div class="stat-card">
+        <span id="totalSize">0 KB</span>
+        <small>Storage Used</small>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="container">
+
+  <!-- UPLOAD PANEL -->
+  <section class="upload-panel">
+    <h2><span class="h2-icon">&#11014;</span> Upload Study Materials</h2>
+    <p class="panel-desc">Add PDFs, Word docs, PowerPoints, or e-books to your library.</p>
+
+    <label class="upload-label" for="fileInput">
+      <span class="upload-icon">&#128193;</span>
+      <span class="upload-text">Click to choose files</span>
+      <span class="upload-hint">PDF, DOC, DOCX, PPT, PPTX, EPUB, TXT</span>
+    </label>
+    <input type="file" id="fileInput" multiple
+           accept=".pdf,.doc,.docx,.ppt,.pptx,.epub,.txt,application/pdf">
+
+    <button id="uploadBtn">
+      <span class="btn-icon">&#10003;</span> Upload to Library
+    </button>
+
+    <div id="statusMessage">No files uploaded yet.</div>
+
+    <div class="share-box">
+      <h3><span class="h2-icon">&#128279;</span> Share This Library</h3>
+      <p class="share-desc">Copy this page's link and send it to anyone:</p>
+      <div class="share-link-row">
+        <input type="text" id="shareLink" readonly>
+        <button id="copyLinkBtn">Copy</button>
+      </div>
+      <p class="share-note">
+        &#9888; Note: this is a browser-only demo. Files uploaded here are saved
+        in <em>your</em> browser's local storage, so the link will only show your
+        materials on the same browser/device where you uploaded them.
+        To make files truly downloadable from any device via a shared link,
+        the project needs a real server (e.g. Firebase, Supabase, or any backend
+        with file storage) — frontend HTML/CSS/JS alone cannot host files for others.
+      </p>
+    </div>
+  </section>
+
+  <!-- LIBRARY PANEL -->
+  <section class="library-panel">
+    <div class="library-header">
+      <h2><span class="h2-icon">&#128218;</span> My Library</h2>
+      <span id="fileCount" class="badge">0</span>
+    </div>
+
+    <input type="text" id="searchInput" class="search-box" placeholder="Search your materials...">
+
+    <div id="fileGrid" class="file-grid">
+      <div class="empty-msg">
+        <span class="empty-icon">&#128218;</span>
+        Your library is empty. Upload your first study material above.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <p>StudyVault &copy; 2026 &mdash; Built by Rabiu Azeezat Adetoun (2023/12180), Computer Science Department</p>
+</footer>
+
+<script src="pro.js"></script>
+</body>
+</html>
